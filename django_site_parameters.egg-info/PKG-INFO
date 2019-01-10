@@ -1,0 +1,73 @@
+Metadata-Version: 1.1
+Name: django-site-parameters
+Version: 0.9
+Summary: Django models to allow Admin-accessible global site parameters
+Home-page: http://github.com/wgbh/django-site-parameters/
+Author: Bob Donahue
+Author-email: bob_donahue@wgbh.org
+License: MIT License, see LICENSE
+Description: ===============
+        Site Parameters
+        ===============
+        
+        Site Parameters is a simple Django app to store customized site-level content, so that it can be maintained from the Admin 
+        by content managers. 
+        
+        There are several models, each corresponding to a generic data type (e.g., text, images, URLs, etc.).  All data are available to all templates through a context processor.
+        
+        As an example, you can have your site's copyright message as a SiteParameterString object rather than hard-coding it into a global footer template.   Or, you can upload a "site canonical image" that would be used as a placeholder in situations where an image in a template isn't available.  
+        
+        Detailed documentation is in the "docs" directory.
+        
+        Quick start
+        -----------
+        
+        1. Add "site_parameters" to your INSTALLED_APPS setting like this::
+        
+            INSTALLED_APPS = [
+                ...
+                'site_parameters',
+            ]
+        
+        2. Add the context_processors to the system context_processors in the settings file like this::
+        
+            TEMPLATES = [
+                {
+                        ...
+                        'OPTIONS': {
+                                'context_processors': [
+                                        ...
+                                        'site_parameters.context_processors.get_custom_site_parameters',
+                                ]
+                                ...
+                        },
+                        ...
+                }
+            ]
+        
+        3. Run `python manage.py migrate` to create the database tables.
+        
+        4. Start the development server and visit http://127.0.0.1:8000/admin/
+           to create a poll (you'll need the Admin app enabled).
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
