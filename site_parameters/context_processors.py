@@ -61,7 +61,7 @@ def get_custom_site_parameters(request):
     ##########################################
     # GLOBAL NUMBERS
     ########################################## 
-    site_numbers = SiteParametersInteger.objects.all()
+    site_numbers = SiteParameterInteger.objects.all()
     d = {}
     for number in site_numbers:
         d[number.slug.replace('-','_')] = number.value
