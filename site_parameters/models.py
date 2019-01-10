@@ -32,8 +32,8 @@ class SiteNavigationSection(BaseControlledVocabulary):
     )
     
     class Meta:
-        verbose_name = 'Site Navigation Menu'
-        verbose_name_plural = 'Site Navigation Menus'
+        verbose_name = 'Navigation Menu'
+        verbose_name_plural = 'Navigation Menus'
     
     def __str__(self):
         return self.title
@@ -81,8 +81,8 @@ class SiteNavigationSectionItem(BaseTimeStampModel, BaseTitleModel):
     )
         
     class Meta:
-        verbose_name = 'Navigation Item'
-        verbose_name_plural = 'Navigation Items'
+        verbose_name = 'Navigation Menu Item'
+        verbose_name_plural = 'Navigation Menu Items'
         
 ###################################### UNARY PARAMETERS BY TYPE #########################################################
         
@@ -97,8 +97,8 @@ class SiteParameterSwitch(AbstractSiteParameter):
     )
     
     class Meta:
-        verbose_name = 'Site Switch'
-        verbose_name_plural = 'Site Swtiches'
+        verbose_name = 'Site: Switch'
+        verbose_name_plural = 'Site: Swtiches'
         
     
 class SiteParameterURL(AbstractSiteParameter):
@@ -117,8 +117,8 @@ class SiteParameterURL(AbstractSiteParameter):
     )
     
     class Meta:
-        verbose_name = 'External Site URL'
-        verbose_name_plural = 'External Site URLs'
+        verbose_name = 'Site: URL Reference'
+        verbose_name_plural = 'Site: URL References'
         
 class SiteParameterInteger(AbstractSiteParameter):
     """
@@ -132,8 +132,8 @@ class SiteParameterInteger(AbstractSiteParameter):
     )
     
     class Meta:
-        verbose_name = 'Numbered Parameter'
-        verbose_name_plural = 'Numbered Parameters'
+        verbose_name = 'Site: Numbered Parameter'
+        verbose_name_plural = 'Site: Numbered Parameters'
         
 class SiteParameterText(AbstractSiteParameter):
     """
@@ -148,8 +148,8 @@ class SiteParameterText(AbstractSiteParameter):
     )
     
     class Meta:
-        verbose_name = 'Site Text Block'
-        verbose_name_plural = 'Site Text Blocks'
+        verbose_name = 'Site: Text Block'
+        verbose_name_plural = 'Site: Text Blocks'
     
 class SiteParameterString(AbstractSiteParameter):
     """
@@ -164,8 +164,8 @@ class SiteParameterString(AbstractSiteParameter):
     )
     
     class Meta:
-        verbose_name = 'Site String'
-        verbose_name_plural = 'Site Strings'
+        verbose_name = 'Site: String'
+        verbose_name_plural = 'Site: Strings'
     
 def get_upload_to(instance, filename):
     return instance.get_upload_to_path(filename)
@@ -197,8 +197,8 @@ class SiteParameterImage(AbstractSiteParameter):
     )
     
     class Meta:
-        verbose_name = 'Site Image'
-        verbose_name_plural = 'Site Images'
+        verbose_name = 'Site: Image'
+        verbose_name_plural = 'Site: Images'
     
     def get_upload_to_path(instance, filename):
         return 'canonical_images/site/'+filename
