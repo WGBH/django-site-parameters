@@ -88,9 +88,13 @@ The "Order in List" field handles ordering.
 
 The "Available" field handles which items will be shown on the site.   
 
+In templates, you can access the information from `{{ global_social_media_dict.slug }}`.
+
 ## Navigation
 
 Navigation Menus are constructed by assembling sets of Navigation Items.  You can have as Navigation Menus as you need.
 
 _If you are also using Django CMS_: the URL Slug field can be used to reference CMS Page objects.  Otherwise you can put in a root-relative URL in the  Internal Link field.
+
+The ordered list of navigation items can be accessed in a template from the context name `global_nav_ + slug`, e.g., `global_nav_footer`.
 
