@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: django-site-parameters
-Version: 0.1.1
+Version: 0.1.2
 Summary: Django models to allow Admin-accessible global site parameters
 Home-page: http://github.com/wgbh/django-site-parameters/
 Author: Bob Donahue
