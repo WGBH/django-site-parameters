@@ -15,6 +15,7 @@ setup(
     license='MIT License, see LICENSE',
     description="Django models to allow Admin-accessible global site parameters",
     long_description=README,
+    long_description_content_type='text/markdown',
     url='http://github.com/wgbh/django-site-parameters/',
     author='Bob Donahue',
     author_email='bob_donahue@wgbh.org',
