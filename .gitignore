@@ -1,0 +1,6 @@
+*.pyc
+
+django_site_parameters.egg-info
+build/
+django_pbsmmapi.egg-info/
+dist
