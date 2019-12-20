@@ -19,7 +19,10 @@ setup(
     url='http://github.com/wgbh/django-site-parameters/',
     author='Bob Donahue',
     author_email='bob_donahue@wgbh.org',
-    install_requires=['Pillow', 'pytz',],
+    install_requires=[
+        'Pillow',
+        'pytz',
+    ],
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Environment :: Web Environment',
@@ -42,6 +45,3 @@ setup(
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
 )
-
-
-
